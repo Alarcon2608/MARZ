@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAR-Z — Gestión de Soporte Interno</title>
+  <meta name="description" content="Plataforma colaborativa de registro, priorización, asignación y auditoría de solicitudes de soporte interno para organizaciones multi-sitio." />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ── Shell autenticado (sidebar + contenido) ── -->
+  <div id="app-shell" class="hidden">
+
+    <aside id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-logo">M</div>
+        <span class="brand-name">MAR-Z</span>
+      </div>
+      <nav id="sidebar-nav"></nav>
+      <div class="sidebar-footer">
+        <div id="user-info" class="user-chip"></div>
+        <button id="btn-logout" class="btn-logout">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+          </svg>
+          Cerrar sesión
+        </button>
+      </div>
+    </aside>
+
+    <main id="main-content">
+      <div id="page-container"></div>
+    </main>
+
+  </div>
+
+  <!-- ── Contenedor no autenticado (login) ── -->
+  <div id="auth-container" class="hidden">
+    <div id="page-container-auth"></div>
+  </div>
+
+</div>
+
+<!-- SPA — módulo principal (type="module" para importar ES modules) -->
+<script type="module" src="/js/app.js"></script>
+
+</body>
+</html>
